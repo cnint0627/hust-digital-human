@@ -1,0 +1,89 @@
+<!-- <<<<<<< HEAD:pages/process/process.wxml -->
+<!-- process.wxml -->
+<scroll-view wx:if="{{imagePath}}" class="container" style="height: 580px; overflow-y: scroll;" scroll-y="true">
+  <!-- 预览区域 -->
+  <view class="preview-section">
+  <block wx:if="{{imagePath}}">
+    <image 
+      wx:if="{{['png','jpg'].includes(imagePath.split('.').pop().toLowerCase())}}" 
+      src="{{imagePath}}" 
+      mode="widthFix" 
+      class="preview-image"
+    ></image>
+    <video 
+      src="{{imagePath}}" 
+      class="preview-video" 
+      controls
+      autoplay="{{false}}" 
+      loop="{{false}}" 
+      muted="{{true}}"
+    ></video>
+  </block>
+</view>
+
+  
+  <!-- 参数设置区域 -->
+  <view wx:if="{{imagePath}}" class="param-section">
+    <!-- <view class="param-item">
+      <text class="param-label">合成类型</text>
+      <picker mode="selector" range="{{synthesisType}}" bindchange="onSynthesisTypeChange" class="param-picker">
+        <view class="picker-value">{{selectedSynthesisType || '请选择合成类型'}}</view>
+      </picker>
+    </view>
+    
+    <view class="param-item">
+      <text class="param-label">表情强度</text>
+      <picker mode="selector" range="{{expressionLevels}}" bindchange="onExpressionLevelChange" class="param-picker">
+        <view class="picker-value">{{selectedExpressionLevel || '请选择表情强度'}}</view>
+      </picker>
+    </view>
+    
+    <view class="param-item">
+      <text class="param-label">音色风格</text>
+      <picker mode="selector" range="{{voiceStyle}}" bindchange="onVoiceStyleChange" class="param-picker">
+        <view class="picker-value">{{selectedVoiceStyle || '请选择音色风格'}}</view>
+      </picker>
+    </view>
+    
+    <view class="param-item">
+      <text class="param-label">背景风格</text>
+      <picker mode="selector" range="{{backgroundScenes}}" bindchange="onBackgroundSceneChange" class="param-picker">
+        <view class="picker-value">{{selectedBackgroundScene || '请选择背景风格'}}</view>
+      </picker>
+    </view>
+    
+    <view class="param-item">
+      <text class="param-label">动作类型</text>
+      <picker mode="selector" range="{{actionTypes}}" bindchange="onActionTypeChange" class="param-picker">
+        <view class="picker-value">{{selectedActionType || '请选择动作类型'}}</view>
+      </picker>
+    </view> -->
+    
+    <view class="param-item">
+      <text class="param-label">请输入数字人台词</text>
+      <input type="text" placeholder="请输入台词" placeholder-style="color: #888888;" bindinput="onDialogueInput" value="{{dialogue}}" class="param-input" />
+    </view>
+  </view>
+  
+  <!-- 操作按钮区域 -->
+  <view class="button-section">
+    <button class="btn upload-btn" bindtap="uploadFile">重新上传</button>
+    <button class="btn start-btn" bindtap="startSynthesis">开始合成</button>
+    <button class="btn tohome-btn" bindtap="goToHome">返回首页</button>
+  </view>
+</scroll-view>
+
+<!-- 初始页面 -->
+<view wx:if="{{!imagePath}}" class="container-init">
+  <view class="wave">
+  <view class="welcome-section">
+    <icon class="welcome-icon" type="info" size="64"></icon>
+    <text class="welcome-text">请上传照片或视频开始制作</text>
+  </view>
+  <button class="btn upload-btn-large" bindtap="uploadFile">
+    <text class="upload-icon">+</text>
+    <text>上传文件</text>
+  </button>
+  <button class="btn tohome-btn" bindtap="goToHome">返回首页</button>
+  </view>
+</view>

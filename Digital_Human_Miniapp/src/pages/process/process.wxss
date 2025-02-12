@@ -1,0 +1,148 @@
+/* process.wxss */
+.container {
+    padding: 20rpx;
+    background-color: #f5f6fa;
+    min-height: 100vh;
+  }
+  
+  .preview-section {
+    display: flex;
+    margin-top: 20%;
+    background: white;
+    padding: 20rpx;
+    border-radius: 16rpx;
+    box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.05);
+    margin-bottom: 30rpx;
+    justify-content: center; /* 水平居中 */
+  }
+  
+  .preview-image, preview-video {
+    margin-top: 20px;
+    width: 100%;
+    border-radius: 8rpx;
+  }
+
+  
+
+
+  /* 参数设置区域样式 */
+.param-section {
+  background: white;
+  padding: 30rpx;
+  border-radius: 16rpx;
+  box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.05);
+  margin: 20rpx;
+}
+
+.param-item {
+  margin-bottom: 30rpx;
+}
+
+.param-label {
+  display: block;
+  font-size: 28rpx;
+  color: #333;
+  margin-bottom: 16rpx;
+  font-weight: 500;
+}
+
+/* 统一选择器和输入框样式 */
+.param-picker,
+.param-input {
+  width: 100%;
+  background: #f5f6fa;
+  border-radius: 8rpx;
+  border: 1px solid #e8e8e8;
+}
+
+.picker-value,
+.param-input {
+  padding: 20rpx;
+  font-size: 28rpx;
+  color: #666;
+}
+
+/* 输入框特殊样式 */
+.param-input {
+  box-sizing: border-box;
+  min-height: 80rpx;
+}
+  
+  .button-section {
+    margin-top: 40rpx;
+    padding: 20rpx;
+  }
+  
+  .btn {
+    width: 100%;
+    margin-bottom: 20rpx;
+    border: none;
+    padding: 24rpx 0;
+    border-radius: 8rpx;
+    font-size: 32rpx;
+    font-weight: 500;
+  }
+  
+  .upload-btn {
+    background: #ffffff;
+    color: #666;
+    border: 2rpx solid #ddd;
+  }
+  
+  .start-btn {
+    background: #4CAF50;
+    color: white;
+  }
+  .tohome-btn{
+    background: #ffffff;
+    color: #666;
+    border: 2rpx solid #ddd;
+    box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.05);
+  }
+
+  /* 初始页面样式 */
+  .container-init {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f5f6fa;
+    padding: 40rpx;
+  }
+  
+  .welcome-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 60rpx;
+  }
+  
+  .welcome-icon {
+    margin-bottom: 30rpx;
+  }
+  
+  .welcome-text {
+    font-size: 34rpx;
+    color: #333;
+    font-weight: 500;
+  }
+  
+  .upload-btn-large {
+    width: 80%;
+    height: 200rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    border-radius: 16rpx;
+    box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.05);
+    margin-bottom: 50px;
+  }
+  
+  .upload-icon {
+    font-size: 48rpx;
+    margin-bottom: 16rpx;
+    color: #4CAF50;
+  }

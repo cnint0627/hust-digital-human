@@ -1,0 +1,12 @@
+<view class="container">
+  <view class="wave"></view>
+  <view class="header">
+    <text class="title">数字人合成</text>
+  </view>
+  <view class="welcome">欢迎使用数字人合成助手</view>
+  <view class="buttons">
+    <button class="button" bindtap="navigateToSynthesize" style="position: relative; left: 0rpx; top: -87rpx">立即合成</button>
+    <button class="button" bindtap="navigateToHistory" style="position: relative; left: 3rpx; top: -58rpx">历史记录</button>
+    <button class="button" bindtap="navigateToFeedback" style="position: relative; left: 2rpx; top: -36rpx">意见反馈</button>
+  </view>
+</view>

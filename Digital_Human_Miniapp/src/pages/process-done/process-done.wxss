@@ -1,0 +1,105 @@
+/* pages/process-done/process-done.wxss */
+/* process-done.wxss */
+.container {
+  min-height: 100vh;
+  padding: 30rpx;
+  background-color: #f5f6fa;
+}
+
+.result-card {
+  background: #ffffff;
+  border-radius: 20rpx;
+  box-shadow: 0 4rpx 20rpx rgba(0, 0, 0, 0.1);
+  padding: 30rpx;
+}
+
+.header {
+  margin-bottom: 40rpx;
+}
+
+.title {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #333333;
+  text-align: center;
+  display: block;
+}
+
+.divider {
+  height: 4rpx;
+  background: linear-gradient(to right, #e1e1e1, #4a90e2, #e1e1e1);
+  margin: 20rpx 0;
+  border-radius: 2rpx;
+}
+
+.image-section {
+  margin: 30rpx 0;
+  display: flex;
+  justify-content: center;
+}
+
+.result-image {
+  width: 600rpx;
+  height: 600rpx;
+  border-radius: 10rpx;
+  box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.1);
+}
+
+.info-section {
+  margin-top: 40rpx;
+}
+
+.info-group {
+  background: #f8f9fd;
+  border-radius: 15rpx;
+  padding: 20rpx;
+}
+
+.info-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20rpx;
+  border-bottom: 2rpx solid #eef0f6;
+}
+
+.info-item:last-child {
+  border-bottom: none;
+}
+
+.label {
+  color: #666666;
+  font-size: 28rpx;
+}
+
+.value {
+  color: #333333;
+  font-size: 28rpx;
+  font-weight: 500;
+}
+
+/* 新增返回首页按钮样式 */
+.button-section {
+  margin-top: 40rpx;
+  padding: 0 20rpx;
+}
+
+.home-button {
+  display: flex; /* 使用 flexbox 布局 */
+  justify-content: center; /* 水平居中 */
+  align-items: center; /* 垂直居中 */
+  width: 100%;
+  height: 88rpx;
+  background: #4a90e2;
+  color: white;
+  font-size: 32rpx;
+  border-radius: 44rpx;
+  border: none;
+  box-shadow: 0 4rpx 12rpx rgba(74, 144, 226, 0.2);
+  transition: all 0.3s ease;
+}
+
+.home-button:active {
+  transform: scale(0.98);
+  box-shadow: 0 2rpx 6rpx rgba(74, 144, 226, 0.1);
+}

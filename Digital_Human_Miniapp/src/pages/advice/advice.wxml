@@ -1,0 +1,46 @@
+<view class="container">
+    <view class="header">
+        <text class="title">意见反馈</text>
+    </view>
+    
+    <view class="content">
+        <form bindsubmit="submitFeedback">
+            <view class="input-group">
+                <label for="name">姓名:</label>
+                <input 
+                    type="text" 
+                    name="name" 
+                    placeholder="请输入您的姓名" 
+                    class="input-field"
+                    bindinput="bindNameInput" 
+                />
+            </view>
+            
+            <view class="input-group">
+                <label for="email">邮箱:</label>
+                <input 
+                    type="email" 
+                    name="email" 
+                    placeholder="请输入您的邮箱" 
+                    class="input-field"
+                    bindinput="bindEmailInput"
+                />
+            </view>
+            
+            <view class="input-group">
+                <label for="feedback">反馈内容:</label>
+                <textarea 
+                    name="feedback" 
+                    placeholder="请输入您的反馈内容" 
+                    class="feedback-area"
+                    bindinput="bindFeedBackInput"
+                ></textarea>
+            </view>
+            
+            <view class="button-group">
+                <button formType="submit" class="submit-button">提交</button>
+                <button class="back-button" bindtap="goBack">返回</button>
+            </view>
+        </form>
+    </view>
+</view>

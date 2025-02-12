@@ -1,0 +1,8 @@
+.idea
+node_modules
+*.pth
+*.mp3
+*.mp4
+*.wav
+*.pkl
+*.pt

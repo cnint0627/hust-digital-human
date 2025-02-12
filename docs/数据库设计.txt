@@ -1,0 +1,36 @@
+**数据库**：MongoDB
+
+**集合 collections**：
+
+1. **用户 users**
+
+   ```json
+   {
+       "_id": 1,	// 主键
+       "openid": 123,	// openid，唯一标识一个微信用户，微信号自带，可以通过微信相关api获取
+       "name": "Bob",	// 昵称
+   }
+   ```
+
+2. **合成记录 records**
+
+   ```json
+   {
+       "_id": 1,	// 主键
+       "openid": 123,	// 该条记录所属用户的openid，用于多表连接
+       "refText": "Hello world",	// 用户输入的参照文本
+       "refPath": "path/to/srcVideo.mp4",	// 用户上传的参照视频url
+       "genPath": "path/to/destVideo.mp4",	// 小程序云存储中合成视频对应的url
+       "done":	true,	// 该条记录中的视频是否合成完毕（因为合成过程是异步的）
+       "date": "2024/10/25"
+       "time": "13:50"
+       "params": {
+           "p1": "xxx",
+           "p2": "xxx",
+           ...
+       }	// 合成参数（暂时先不考虑）
+   }
+   ```
+
+   
+

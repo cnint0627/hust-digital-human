@@ -1,0 +1,67 @@
+<scroll-view  class="container" style="height: 500px; overflow-y: scroll;" scroll-y="true">
+    <view class="header">
+        <text class="page-title">记录列表</text>
+    </view>
+    
+    <view class="record-list">
+        <block wx:for="{{records}}" wx:key="id">
+            <view class="record-item" bindtap="goToDetail" data-item="{{item}}" style="height: 562rpx; display: flex; box-sizing: border-box">
+                <view class="record-content" style="width: 591rpx; display: block; box-sizing: border-box">
+                    <view class="record-main" style="width: 639rpx; display: flex; box-sizing: border-box">
+                        <view class="record-text">
+                            <text class="record-title">{{item.name}}</text>
+                            <view class="record-info">
+                                <text class="record-date">{{item.date}}</text>
+                                <text class="record-time">{{item.time}}</text>
+                            </view>
+                        </view>
+                        <text wx:if="{{item.done===false}}" class="status-text" style="width: 162rpx; display: block; box-sizing: border-box">尚未生成</text>
+                        <text wx:if="{{item.done===true}}" class="status-finish-text" style="width: 162rpx; display: block; box-sizing: border-box">生成完成</text>
+                    </view>
+                    <view class="image-text" style="width: 450rpx; height: 350rpx; display: flex; box-sizing: border-box; position: relative; left: 71rpx; top: -1rpx; flex-direction: column">
+                    <!--<image 
+                        wx:if="{{(item.genPath!='Not yet generated')&&(item.fileExtension==='png'||item.fileExtension==='jpg')}}" 
+                        class="record-image" 
+                        src="{{item.videoUrl}}" 
+                        mode="aspectFill"
+                    ></image>
+                    <video
+                    wx:if="{{(item.genPath != 'Not yet generated')&&(item.fileExtension==='mp4')}}"
+                    class="record-video"
+                    src="{{item.videoUrl}}"
+                    controls
+                     style="width: 408rpx; display: block; box-sizing: border-box; left: 0rpx; top: 0rpx"></video>-->
+                    
+                     <video wx:if="{{item.done===true}}" 
+                    src="{{item.genPath}}" 
+                    controls 
+                    class="result-video" style="position: relative; left: 47rpx; top: 40rpx; width: 358rpx; height: 295rpx; display: block; box-sizing: border-box">
+                    </video>
+                    <video wx:if="{{item.done===false}}" 
+                    src="https://cdn.pixabay.com/animation/2023/08/11/21/18/21-18-05-265_512.gif" 
+                    controls 
+                    class="result-video" style="position: relative; left: 47rpx; top: 40rpx; width: 358rpx; height: 295rpx; display: block; box-sizing: border-box">
+                    </video>
+                    <view wx:if="{{item.genPath!='Not yet generated'}}" class="record-params" style="height: 89rpx; display: flex; box-sizing: border-box; position: relative; left: -37rpx; top: 79rpx; width: 608rpx">
+                            
+                            
+                            
+                            
+                            
+                            <text wx:if="{{item.param.dialogue}}" class="record-param-text">数字人台词：{{item.param.dialogue}}</text>
+
+                            <text wx:if="{{!item.param.dialogue}}" class="record-param-text" style="height: 72rpx; display: block; box-sizing: border-box; width: 562rpx; position: relative; left: -1rpx; top: -1rpx">数字人台词：无</text>
+                    </view>
+                    </view>
+                </view>
+                <view class="record-arrow" style="width: 47rpx; display: block; box-sizing: border-box; position: relative; left: -10rpx; top: -9rpx; height: 66rpx">›</view>
+            </view>
+        </block>
+    </view>
+
+    <view class="button-container">
+        <button class="back-button" bindtap="goToHome">
+            <text class="button-text">返回首页</text>
+        </button>
+    </view>
+</scroll-view>

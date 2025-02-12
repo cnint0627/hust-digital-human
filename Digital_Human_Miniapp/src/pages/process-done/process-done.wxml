@@ -1,0 +1,51 @@
+<!--pages/process-done/process-done.wxml-->
+<!--合成完成界面，这个页面展示数字人，如果还没有完成页面上显示进度条提示（或者等待中的图标）-->
+<scroll-view class="container" style="height: 1770rpx; overflow-y: scroll; position: relative; left: 0rpx; top: 155rpx; display: flex; box-sizing: border-box" scroll-y="true">
+  <view class="result-card">
+    <view class="header">
+      <text class="title">合成完成</text>
+      <view class="divider"></view>
+    </view>
+    
+    <view class="image-section">
+      <!--<image wx:if="fileExtension==='png'||fileExtension==='jpg'" src="{{filePath}}" mode="aspectFit" class="result-image"></image>-->
+      <video 
+         src="{{videoUrl}}" 
+         controls 
+         class="result-video">
+        </video>
+    </view>
+    
+    <view class="vedio-section">
+      <vedio src="{{filePath}}"></vedio>
+    </view>
+    <button type="primary" style="zoom: 80%" bindtap="save">保存到本地</button>
+    <view class="info-section">
+      <view class="info-group">
+      
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <view class="info-item">
+          <text class="label">生成时间</text>
+          <text class="value">{{date}} {{time}}</text>
+        </view>
+        <view class="info-item">
+          <text class="label">数字人台词</text>
+          <text class="value">{{dialogue}}</text>
+        </view>
+      </view>
+    </view>
+    
+    <!-- 添加返回首页按钮 -->
+    <view class="button-section">
+      <button class="home-button" bindtap="goToHome">返回首页</button>
+    </view>
+  </view>
+</scroll-view>

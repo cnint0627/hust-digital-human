@@ -1,0 +1,20 @@
+<!-- loading.wxml -->
+<view class="loading-container">
+  <view class="loading-card">
+    <view class="loading-icon">
+      <view class="loading-spinner"></view>
+    </view>
+    
+    <view class="loading-title">
+      正在生成中
+    </view>
+    
+    <view class="loading-text">
+      您可以在此页面等待，或在"首页-历史记录"中查看生成结果
+    </view>
+    
+    <button class="countdown-button" bindtap="goToHome">
+      返回首页
+    </button>
+  </view>
+</view>

@@ -1,0 +1,64 @@
+.loading-container {
+  min-height: 100vh;
+  background-color: #f9fafb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 32rpx;
+}
+
+.loading-card {
+  background-color: #ffffff;
+  border-radius: 16rpx;
+  padding: 48rpx;
+  width: 80%;
+  max-width: 600rpx;
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.loading-icon {
+  margin-bottom: 32rpx;
+  display: flex;
+  justify-content: center;
+}
+
+.loading-spinner {
+  width: 80rpx;
+  height: 80rpx;
+  border: 6rpx solid #e5e7eb;
+  border-top-color: #3b82f6;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.loading-title {
+  font-size: 36rpx;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 16rpx;
+}
+
+.loading-text {
+  font-size: 28rpx;
+  color: #6b7280;
+  margin-bottom: 32rpx;
+}
+
+.countdown-text {
+  font-size: 24rpx;
+  color: #9ca3af;
+}
+
+.countdown-button{
+  background: #4CAF50;
+  color: white;
+}
+
+
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
